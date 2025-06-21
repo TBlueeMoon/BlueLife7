@@ -1,33 +1,85 @@
+:root {
+  --primary: #005fdd;
+  --bg: #f4f9ff;
+  --text: #222;
+  --header-bg: #dbeaff;
+  --nav-bg: #e6f0ff;
+}
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5faff;
-  color: #1a1a1a;
+  background: var(--bg);
+  color: var(--text);
 }
 
 header {
-  background-color: #1e3a8a;
-  color: white;
-  padding: 2rem;
+  background: var(--header-bg);
   text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--primary);
+}
+
+nav {
+  background: var(--nav-bg);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary);
 }
 
 main {
-  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
-.welcome {
-  background-color: #e0ecff;
-  padding: 1.5rem;
-  border-radius: 10px;
+.posts {
+  flex: 3;
+  margin-right: 1rem;
+}
+
+aside {
+  flex: 1;
+  background: #ffffff;
+  padding: 1rem;
+  border-left: 3px solid var(--primary);
+}
+
+article {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid var(--primary);
+}
+
+.date {
+  font-size: 0.9em;
+  color: #666;
 }
 
 footer {
+  background: var(--header-bg);
   text-align: center;
   padding: 1rem;
-  background-color: #dbeafe;
-  color: #1e3a8a;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
